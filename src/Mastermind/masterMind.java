@@ -18,6 +18,8 @@ public class masterMind {
         String oranjePin = "Oranje";
         String groenPin = "Groen";
         
+        String secretcode = "Blauw, Groen, Paars, Rood";
+        
         
         //vakjes en rijen//
         String vakje1Rij1 = "1.1";
@@ -69,6 +71,61 @@ public class masterMind {
         String vakje2Rij10 = "10.2";
         String vakje3Rij10 = "10.3";
         String vakje4Rij10 = "10.4";
+        
+        //codemaker//
+        
+        String codemakervakje1Rij1;
+        String codemakervakje2Rij1;
+        String codemakervakje3Rij1;
+        String codemakervakje4Rij1;
+        
+        String codemakervakje1Rij2;
+        String codemakervakje2Rij2;
+        String codemakervakje3Rij2;
+        String codemakervakje4Rij2;
+        
+        String codemakervakje1Rij3;
+        String codemakervakje2Rij3;
+        String codemakervakje3Rij3;
+        String codemakervakje4Rij3;
+        
+        String codemakervakje1Rij4;
+        String codemakervakje2Rij4;
+        String codemakervakje3Rij4;
+        String codemakervakje4Rij4;
+        
+        String codemakervakje1Rij5;
+        String codemakervakje2Rij5;
+        String codemakervakje3Rij5;
+        String codemakervakje4Rij5;
+        
+        String codemakervakje1Rij6;
+        String codemakervakje2Rij6;
+        String codemakervakje3Rij6;
+        String codemakervakje4Rij6;
+        
+        String codemakervakje1Rij7;
+        String codemakervakje2Rij7;
+        String codemakervakje3Rij7;
+        String codemakervakje4Rij7;
+        
+        String codemakervakje1Rij8;
+        String codemakervakje2Rij8;
+        String codemakervakje3Rij8;
+        String codemakervakje4Rij8;
+        
+        String codemakervakje1Rij9;
+        String codemakervakje2Rij9;
+        String codemakervakje3Rij9;
+        String codemakervakje4Rij9;
+        
+        String codemakervakje1Rij10;
+        String codemakervakje2Rij10;
+        String codemakervakje3Rij10;
+        String codemakervakje4Rij10;
+        
+        
+        		
         
         
 
