@@ -10,6 +10,11 @@ public class masterMind {
         String codeMaker = "CodeMaker";
         String codeKraker = "CodeKraker";
         
+        int beurt = 1;
+
+        int zwartePionnen = 0;
+        int wittePionnen = 0;
+        
         //pins//
         String rodePin = "rood";
         String blauwePin = "Blauw";
@@ -38,6 +43,7 @@ public class masterMind {
         String vakje3Rij1 = sc.next();
         System.out.println("Rij 1 - Vakje 4: ");
         String vakje4Rij1 = sc.next();
+        
          
         System.out.println("Rij 2 - Vakje 1: ");
         String vakje1Rij2 = sc.next();
@@ -172,15 +178,9 @@ public class masterMind {
         String codemakervakje3Rij10;
         String codemakervakje4Rij10;
         
-        sc.close();
-        		
         
         
-
-        int beurt = 1;
-
-        int zwartePionnen = 0;
-        int wittePionnen = 0;
+        
 
         boolean gewonnen = false;
         boolean verloren = false;
@@ -191,6 +191,9 @@ public class masterMind {
 
         System.out.println("Gewonnen: " + gewonnen);
         System.out.println("Verloren: " + verloren);
+        
+        sc.close();
+		
         
        
     }
