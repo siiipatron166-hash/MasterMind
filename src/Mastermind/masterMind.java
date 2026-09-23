@@ -44,6 +44,8 @@ public class masterMind {
         System.out.println("Rij 1 - Vakje 4: ");
         String vakje4Rij1 = sc.next();
         
+        if(secretcode.equals)vakje1Rij1 + vakje2Rij1 + vakje3Rij1 + vakje4Rij1  =)
+        
          
         System.out.println("Rij 2 - Vakje 1: ");
         String vakje1Rij2 = sc.next();
