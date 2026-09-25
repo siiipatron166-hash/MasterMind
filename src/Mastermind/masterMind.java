@@ -15,6 +15,9 @@ public class masterMind {
         int zwartePionnen = 0;
         int wittePionnen = 0;
         
+        boolean gewonnen = false;
+        boolean verloren = false;
+        
         //pins//
         String rodePin = "rood";
         String blauwePin = "Blauw";
@@ -23,7 +26,7 @@ public class masterMind {
         String oranjePin = "Oranje";
         String groenPin = "Groen";
         
-        String secretcode = "Blauw, Groen, Paars, Rood";
+        String[] secretcode = {"Blauw", "Groen", "Paars", "Rood"};
         
         System.out.println("MasterMind");
         System.out.println("CodeMaker: " + codeMaker);
@@ -44,8 +47,22 @@ public class masterMind {
         System.out.println("Rij 1 - Vakje 4: ");
         String vakje4Rij1 = sc.next();
         
-        if(secretcode.equals)vakje1Rij1 + vakje2Rij1 + vakje3Rij1 + vakje4Rij1  =)
+
         
+        String[] poging = {vakje1Rij1, vakje2Rij1, vakje3Rij1, vakje4Rij1};
+
+        for (int i = 0; i < 4; i++) {
+            if (poging[i].equals(secretcode[i])) {
+                System.out.println("Zwart");
+            } else if (poging[i].equals(secretcode[0]) ||
+                       poging[i].equals(secretcode[1]) ||
+                       poging[i].equals(secretcode[2]) ||
+                       poging[i].equals(secretcode[3])) {
+                System.out.println("Wit");
+            } else {
+                System.out.println("Fout");
+            }
+        }
          
         System.out.println("Rij 2 - Vakje 1: ");
         String vakje1Rij2 = sc.next();
@@ -181,11 +198,6 @@ public class masterMind {
         String codemakervakje4Rij10;
         
         
-        
-        
-
-        boolean gewonnen = false;
-        boolean verloren = false;
 
 
         System.out.println("Zwarte pionnen: " + zwartePionnen);
