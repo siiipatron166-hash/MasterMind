@@ -72,6 +72,21 @@ public class masterMind {
         String vakje3Rij2 = sc.next();
         System.out.println("Rij 2 - Vakje 4: ");
         String vakje4Rij2 = sc.next();
+        
+        String[] poging2 = {vakje1Rij2, vakje2Rij2, vakje3Rij2, vakje4Rij2};
+
+        for (int i = 0; i < 4; i++) {
+            if (poging2[i].equals(secretcode[i])) {
+                System.out.println("Zwart");
+            } else if (poging[i].equals(secretcode[0]) ||
+                       poging[i].equals(secretcode[1]) ||
+                       poging[i].equals(secretcode[2]) ||
+                       poging[i].equals(secretcode[3])) {
+                System.out.println("Wit");
+            } else {
+                System.out.println("Fout");
+            }
+        }
          
         System.out.println("Rij 3 - Vakje 1: ");
         String vakje1Rij3 = sc.next();
@@ -81,6 +96,21 @@ public class masterMind {
         String vakje3Rij3 = sc.next();
         System.out.println("Rij 3 - Vakje 4: ");
         String vakje4Rij3 = sc.next();
+        
+        String[] poging3 = {vakje1Rij3, vakje2Rij3, vakje3Rij3, vakje4Rij3};
+
+        for (int i = 0; i < 4; i++) {
+            if (poging2[i].equals(secretcode[i])) {
+                System.out.println("Zwart");
+            } else if (poging[i].equals(secretcode[0]) ||
+                       poging[i].equals(secretcode[1]) ||
+                       poging[i].equals(secretcode[2]) ||
+                       poging[i].equals(secretcode[3])) {
+                System.out.println("Wit");
+            } else {
+                System.out.println("Fout");
+            }
+        }
          
         System.out.println("Rij 4 - Vakje 1: ");
         String vakje1Rij4 = sc.next();
