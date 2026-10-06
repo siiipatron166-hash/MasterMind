@@ -39,6 +39,7 @@ public class masterMind {
 		// vakjes en rijen
 
 		for (beurt = 1; beurt <= 10; beurt++) {
+			String[] pogingen = new String[5];
 
 			System.out.println();
 			System.out.println("Dit is beurt: " + beurt);
@@ -47,32 +48,26 @@ public class masterMind {
 			zwartePionnen = 0;
 			wittePionnen = 0;
 
-			System.out.println("Rij " + beurt + " - Vakje 1: ");
-			String vakje1 = sc.next();
+			for(int poging = 0; poging < 4; poging++) {
+			System.out.println("Rij " + beurt + "vakje" + poging);
+			pogingen[poging] = sc.next();
+		
+			}
+			
 
-			System.out.println("Rij " + beurt + " - Vakje 2: ");
-			String vakje2 = sc.next();
-
-			System.out.println("Rij " + beurt + " - Vakje 3: ");
-			String vakje3 = sc.next();
-
-			System.out.println("Rij " + beurt + " - Vakje 4: ");
-			String vakje4 = sc.next();
-
-			String[] poging = { vakje1, vakje2, vakje3, vakje4 };
 
 			for (int i = 0; i < 4; i++) {
 				String message = "Fout";
-				if (poging[i].equals(secretcode[i])) {
+				if (pogingen[i].equals(secretcode[i])) {
 
 					message = "Zwart";
 					zwartePionnen++;
 
 				}
-
+                     // vergelijken secretcode
 				else {
 					for (int j = 0; j < secretcode.length; j++) {
-					    if (poging[i].equals(secretcode[j])) {
+					    if (pogingen[i].equals(secretcode[j])) {
 					        message = "Wit";
 					        wittePionnen++;
 					        break;
@@ -83,6 +78,7 @@ public class masterMind {
 				System.out.println(message);
 			}
 
+//			 wanneer gewonnen wanneer verloren bepalen
 			if (zwartePionnen == 4) {
 
 				gewonnen = true;
