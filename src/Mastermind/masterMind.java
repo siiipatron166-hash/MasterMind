@@ -19,27 +19,25 @@ public class masterMind {
 		boolean verloren = false;
 
 		// pins
-		String rodePin = "Rood";
-		String blauwePin = "Blauw";
-		String gelePin = "Geel";
-		String paarsePin = "Paars";
-		String oranjePin = "Oranje";
-		String groenPin = "Groen";
+		 String[] kleuren = {
+		     "Rood", "Blauw", "Geel",
+		     "Paars", "Oranje", "Groen"
+		 };
 
 		// Geheime code
-		String[] secretcode = { "Blauw", "Groen", "Paars", "Rood" };
+		String[] secretcode = { kleuren[1], kleuren[0], kleuren[3],kleuren[5]};
 
 		System.out.println("MasterMind");
 
 		System.out.println("CodeMaker: " + codeMaker);
 		System.out.println("CodeKraker: " + codeKraker);
 
-		System.out.println("De geheime code bestaat uit 4 kleuren.");
+		System.out.println("De geheime code bestaat uit" + secretcode.length + " kleuren.");
 
 		// vakjes en rijen
 
 		for (beurt = 1; beurt <= 10; beurt++) {
-			String[] pogingen = new String[5];
+			String[] pogingen = new String[secretcode.length];
 
 			System.out.println();
 			System.out.println("Dit is beurt: " + beurt);
@@ -48,15 +46,15 @@ public class masterMind {
 			zwartePionnen = 0;
 			wittePionnen = 0;
 
-			for(int poging = 0; poging < 4; poging++) {
-			System.out.println("Rij " + beurt + "vakje" + poging);
+			for(int poging = 0; poging < pogingen.length; poging++) {
+			System.out.println("Rij " + beurt + "vakje" + (poging + 1));
 			pogingen[poging] = sc.next();
 		
 			}
 			
 
 
-			for (int i = 0; i < 4; i++) {
+			for (int i = 0; i < pogingen.length; i++) {
 				String message = "Fout";
 				if (pogingen[i].equals(secretcode[i])) {
 
@@ -79,7 +77,7 @@ public class masterMind {
 			}
 
 //			 wanneer gewonnen wanneer verloren bepalen
-			if (zwartePionnen == 4) {
+			if (zwartePionnen == pogingen.length) {
 
 				gewonnen = true;
 
