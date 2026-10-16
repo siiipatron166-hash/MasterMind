@@ -19,13 +19,10 @@ public class masterMind {
 		boolean verloren = false;
 
 		// pins
-		 String[] kleuren = {
-		     "Rood", "Blauw", "Geel",
-		     "Paars", "Oranje", "Groen"
-		 };
+		String[] kleuren = { "Rood", "Blauw", "Geel", "Paars", "Oranje", "Groen" };
 
 		// Geheime code
-		String[] secretcode = { kleuren[1], kleuren[0], kleuren[3],kleuren[5]};
+		String[] secretcode = { kleuren[1], kleuren[0], kleuren[3], kleuren[5] };
 
 		System.out.println("MasterMind");
 
@@ -34,7 +31,7 @@ public class masterMind {
 
 		System.out.println("De geheime code bestaat uit" + secretcode.length + " kleuren.");
 
-		// vakjes en rijen
+		//beurt
 
 		for (beurt = 1; beurt <= 10; beurt++) {
 			String[] pogingen = new String[secretcode.length];
@@ -46,13 +43,11 @@ public class masterMind {
 			zwartePionnen = 0;
 			wittePionnen = 0;
 
-			for(int poging = 0; poging < pogingen.length; poging++) {
-			System.out.println("Rij " + beurt + "vakje" + (poging + 1));
-			pogingen[poging] = sc.next();
-		
-			}
-			
+			for (int poging = 0; poging < pogingen.length; poging++) {
+				System.out.println("Rij " + beurt + "vakje" + (poging + 1));
+				pogingen[poging] = sc.next();
 
+			}
 
 			for (int i = 0; i < pogingen.length; i++) {
 				String message = "Fout";
@@ -62,16 +57,16 @@ public class masterMind {
 					zwartePionnen++;
 
 				}
-                     // vergelijken secretcode
+				// vergelijken secretcode
 				else {
 					for (int j = 0; j < secretcode.length; j++) {
-					    if (pogingen[i].equals(secretcode[j])) {
-					        message = "Wit";
-					        wittePionnen++;
-					        break;
-					    }
+						if (pogingen[i].equals(secretcode[j])) {
+							message = "Wit";
+							wittePionnen++;
+							break;
+						}
 					}
-					
+
 				}
 				System.out.println(message);
 			}
